@@ -1,0 +1,4966 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="FreeTAKTeam">
+      
+      
+      
+        <link rel="prev" href="../COTDomain/">
+      
+      
+        <link rel="next" href="../COTTable/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Work in progress COT Hierarchy Tree - FreeTAKServer Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#work-in-progress-cot-hierarchy-tree" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="FreeTAKServer Documentation" class="md-header__button md-logo" aria-label="FreeTAKServer Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FreeTAKServer Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Work in progress COT Hierarchy Tree
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FreeTAKTeam/FreeTAKServer-User-Docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  FreeTAKServer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../API/REST_APIDoc/" class="md-tabs__link">
+        
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../FAQ/" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../FreeTAKHub/Integration/NodeRedinstallation/" class="md-tabs__link">
+          
+  
+    
+  
+  FreeTAKHub
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../HowToHelp/1.gettingStartedAsHelper/" class="md-tabs__link">
+        
+  
+    
+  
+  HowToHelp
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Installation/Tools/" class="md-tabs__link">
+          
+  
+    
+  
+  Installation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Usage/Connecting%20ATAK/" class="md-tabs__link">
+        
+  
+    
+  
+  Usage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../administration/CLI/" class="md-tabs__link">
+        
+  
+    
+  
+  Administration
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tools/FreeTAKMumla/" class="md-tabs__link">
+        
+  
+    
+  
+  Tools
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="FreeTAKServer Documentation" class="md-nav__button md-logo" aria-label="FreeTAKServer Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    FreeTAKServer Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FreeTAKTeam/FreeTAKServer-User-Docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FreeTAKServer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../API/REST_APIDoc/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../API/REST_API_InternalDoc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API - Internal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../FAQ/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FeaturesCompared/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FreeTAKServer Compared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manifesto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manifesto for FreeTAKTeam
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../COTDomain/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Work in progress COT Hierarchy Tree
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COTTable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    COT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MilSTD2525/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Mil-STD-2525 and COTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    FreeTAKHub
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            FreeTAKHub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FreeTAKHub/Integration/NodeRedinstallation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FreeTAKHub/Video/Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FreeTAKHub/VideoChecker/VideoCheck/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VideoChecker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FreeTAKHub/Voice/VoiceServer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FreeTAKHub/WebMap/Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebMap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../HowToHelp/1.gettingStartedAsHelper/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    HowToHelp
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            HowToHelp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../HowToHelp/DevelopmentSetup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup a development enviroment for FTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Installation/Cloud/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools you need
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/InfrastructurePlanning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure Planning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Video%20Guides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Installation/Ansible/Ansible/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ansible
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ansible
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Ansible/ZeroTouchInstall/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Touch Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Installation/Linux/1_Install/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Linux/3_ManualConfiguration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 ManualConfiguration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Linux/Running/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Linux/Service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Linux/Update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/RaspberryPie/Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RaspberryPie
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Installation/Android/Android/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Android
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            Android
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Android/installUIOnAndroid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FTS-UI Installation with Android
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Installation/Docker/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Docker/CLI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Docker/Debian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Docker/Quick%20Start%20Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Docker/Raspberry%20Pi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Raspberry Pi 4/Raspberry Pi 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Docker/Multiple%20Servers/multiple/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Servers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Docker/Upgrade/Upgrade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Installation/Windows/FreeTAKServer_Windows_Install/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Windows
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_10" id="__nav_6_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            Windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Windows/FreeTAKServer_Windows_Install_Tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FreeTAKServer Install On Windows Computer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Installation/Troubleshooting/InstallationCheck/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_11" id="__nav_6_11_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Troubleshooting/SocketIssue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSL Issue: Regenerate Certificate Revocation List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Installation/Troubleshooting/troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Usage/Connecting%20ATAK/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Usage/Connecting%20WinTAK/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connecting WinTAK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Usage/ExCheck/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ExCheck
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Usage/VideoManagement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../administration/CLI/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Administration
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Administration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/SSL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/Wed%20Admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Administration Manual WebUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/usingConsole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unix Console
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tools/FreeTAKMumla/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/FreeTAKUAS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FreeTAKUAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/UASTool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UAS tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/takICU/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TAK ICU
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/Manuals/UserGuides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manuals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="work-in-progress-cot-hierarchy-tree">Work in progress COT Hierarchy Tree</h1>
+<details>
+<summary> COT Hierarchy Tree</summary>
+
+### Heading   
+<details>
+  <summary>1. a   </summary>  
+    1. .*
+        1. 9        
+            1. 1
+
+                1. 1
+   </details>
+    <details>
+   <summary> 2. A<summary>
+        1. C
+            1. F
+                1. q
+            2. H
+            3. L
+        2. M
+            1. F
+                1. A
+                2. B
+                3. C
+                    1. H
+                    2. L
+                    3. M
+                4. D
+                5. F
+                    1. I
+                6. g
+                7. H
+                8. J
+                9. K
+                    1. B
+                    2. D
+                10. L
+                11. M
+                12. O
+                13. P
+                    1. M
+                    2. N
+                14. Q
+                    1. A
+                    2. B
+                    3. C
+                    4. D
+                    5. F
+                    6. H
+                    7. I
+                    8. J
+                    9. K
+                    10. L
+                    11. M
+                    12. N
+                    13. O
+                    14. P
+                    15. R
+                        1. W
+                        2. X
+                        3. Z
+                    16. S
+                    17. T
+                    18. U
+                    19. Y
+                15. R
+                    1. W
+                    2. X
+                    3. Z
+                16. S
+                17. T
+                18. U
+                    1. H
+                    2. L
+                    3. M
+                19. Y
+            2. H
+                1. A
+                2. C
+                    1. H
+                    2. L
+                    3. M
+                3. D
+                4. H
+                5. I
+                6. J
+                7. K
+                8. M
+                9. O
+                10. Q
+                11. R
+                12. S
+                13. T
+                14. U
+                    1. H
+                    2. L
+                    3. M
+            3. L
+        3. W
+            1. B
+            2. D
+            3. M
+                1. A
+                    1. A
+                    2. P
+                    3. S
+                2. B
+                3. C
+                    1. M
+                4. L
+                5. S
+                    1. A
+                        1. f
+                        2. i
+                        3. m
+                    2. B
+                    3. S
+                    4. U
+                6. U
+    3. F
+        1. A
+            1. F
+                1. A
+                2. K
+                3. U
+                    1. H
+                    2. L
+                    3. M
+            2. H
+                1. A
+                2. H
+                3. U
+                    1. H
+                    2. L
+                    3. M
+            3. V
+        2. B
+        3. G
+            1. C
+            2. P
+                1. A
+            3. R
+            4. S
+        4. N
+            1. B
+            2. N
+            3. S
+            4. U
+    4. G
+        1. E
+            1. S
+                1. E
+                2. R
+            2. V
+                1. A
+                    1. A
+                        1. R
+                    2. C
+                    3. I
+                    4. L
+                    5. S
+                    6. T
+                        1. H
+                            1. R
+                        2. L
+                            1. R
+                        3. M
+                            1. R
+                2. C
+                    1. A
+                        1. H
+                        2. L
+                        3. M
+                    2. F
+                        1. H
+                        2. L
+                        3. M
+                    3. J
+                        1. H
+                        2. L
+                        3. M
+                    4. M
+                        1. H
+                        2. L
+                        3. M
+                    5. O
+                        1. H
+                        2. L
+                        3. M
+                    6. T
+                        1. H
+                        2. L
+                        3. M
+                    7. U
+                        1. H
+                        2. L
+                        3. M
+                3. E
+                    1. A
+                        1. A
+                        2. T
+                    2. B
+                    3. C
+                    4. D
+                        1. A
+                    5. E
+                    6. F
+                    7. H
+                    8. M
+                        1. L
+                        2. V
+                    9. R
+                    10. S
+                4. m
+                5. M
+                6. S
+                    1. C
+                    2. P
+                    3. R
+                    4. T
+                    5. W
+                7. T
+                8. U
+                    1. A
+                        1. A
+                    2. B
+                    3. L
+                    4. R
+                        1. l
+                        2. m
+                        3. s
+                    5. S
+                        1. H
+                        2. L
+                        3. M
+                    6. T
+                        1. H
+                        2. L
+                    7. X
+            3. W
+                1. A
+                    1. H
+                    2. L
+                    3. M
+                2. D
+                    1. H
+                        1. S
+                    2. L
+                        1. S
+                    3. M
+                        1. S
+                3. G
+                    1. H
+                    2. L
+                    3. M
+                    4. R
+                4. H
+                    1. H
+                        1. S
+                    2. L
+                        1. S
+                    3. M
+                        1. S
+                5. M
+                    1. A
+                        1. I
+                            1. E
+                            2. R
+                        2. L
+                            1. E
+                            2. R
+                        3. S
+                            1. E
+                            2. R
+                        4. T
+                            1. E
+                            2. R
+                    2. S
+                        1. I
+                        2. L
+                        3. S
+                    3. T
+                        1. H
+                        2. L
+                        3. M
+                6. O
+                    1. H
+                    2. L
+                    3. M
+                7. R
+                    1. H
+                    2. L
+                    3. R
+                8. S
+                    1. H
+                    2. L
+                    3. M
+                9. T
+                    1. H
+                    2. L
+                    3. M
+                10. X
+                    1. H
+                    2. L
+                    3. M
+                11. Z
+                    1. H
+                    2. L
+                    3. M
+            4. X
+                1. F
+                2. L
+                3. M
+                    1. C
+                    2. L
+                4. N
+        2. I
+            1. B
+                1. A
+                2. N
+            2. c
+                1. b
+                2. bar
+                3. can
+                    1. l
+                4. frm
+                5. l
+                6. mon
+                7. o
+                8. rah
+                9. rel
+                10. res
+                11. ret
+                12. sch
+                13. vip
+                14. whs
+            3. E
+                1. h
+                2. l
+                3. o
+            4. G
+            5. i
+                1. e
+                    1. EOC
+                    2. ic
+                    3. icc
+                    4. icp
+                    5. wr
+                2. f
+                    1. fd
+                3. h
+                    1. md
+                4. l
+                    1. cp
+                    2. hp
+                    3. lp
+                    4. ntz
+                    5. sd
+                    6. SP
+                5. m
+                6. o
+                    1. AD
+                        1. ems
+                        2. f
+                        3. hwy
+                        4. mda
+                        5. pl
+                        6. ps
+                        7. tow
+                        8. ts
+                    2. bcc
+                    3. dmz
+                    4. isp
+                    5. mc
+                        1. f
+                        2. h
+                        3. l
+                    6. mes
+                    7. mob
+                        1. ems
+                        2. es
+                        3. f
+                        4. hwy
+                        5. mda
+                        6. pl
+                        7. ps
+                        8. tow
+                    8. ps
+                    9. rl
+                    10. sa
+                        1. ems
+                        2. f
+                        3. hwy
+                        4. mda
+                        5. pl
+                        6. ps
+                        7. tow
+                        8. ts
+                    11. sc
+                    12. seg
+                    13. t
+                        1. IM
+                        2. tc
+                        3. td
+                        4. tm
+                    14. tmp
+                        1. f
+                        2. h
+                        3. l
+                7. p
+            6. M
+                1. A
+                2. C
+                3. E
+                4. F
+                    1. A
+                    2. P
+                        1. W
+                    3. S
+                5. G
+                6. M
+                7. N
+                    1. B
+                        1. l
+                        2. m
+                        3. s
+                    2. c
+                8. S
+                9. V
+            7. P
+                1. D
+            8. R
+                1. M
+                2. N
+                    1. B
+                    2. C
+                    3. N
+                3. P
+                    1. r
+            9. r
+                1. h
+                2. i
+                3. ra
+                4. u
+            10. T
+                1. a
+                2. hb
+                3. hs
+                4. l
+                5. pg
+                6. r
+                7. s
+            11. U
+                1. E
+                    1. c
+                    2. D
+                    3. F
+                    4. h
+                    5. N
+                    6. o
+                    7. ps
+                2. P
+                3. R
+                4. T
+                    1. com
+                        1. af
+                        2. sat
+                        3. tow
+                    2. r
+                        1. s
+                    3. tp
+                        1. ts
+                    4. tv
+                        1. c
+                        2. s
+            12. X
+                1. H
+                2. hcf
+        3. U
+            1. C
+                1. A
+                    1. A
+                        1. A
+                            1. S
+                            2. T
+                            3. W
+                        2. C
+                        3. D
+                        4. L
+                        5. M
+                        6. O
+                            1. S
+                        7. S
+                        8. U
+                    2. T
+                        1. A
+                        2. H
+                        3. L
+                        4. M
+                        5. R
+                        6. W
+                            1. R
+                    3. W
+                        1. A
+                        2. H
+                        3. L
+                        4. M
+                        5. R
+                        6. S
+                        7. W
+                            1. R
+                2. D
+                    1. C
+                    2. G
+                    3. H
+                        1. H
+                        2. P
+                    4. M
+                        1. H
+                        2. L
+                            1. A
+                        3. M
+                    5. O
+                    6. S
+                        1. C
+                        2. S
+                        3. V
+                    7. T
+                3. E
+                    1. C
+                        1. A
+                        2. C
+                        3. H
+                        4. L
+                        5. M
+                        6. O
+                        7. R
+                        8. S
+                        9. T
+                        10. W
+                    2. N
+                        1. N
+                4. F
+                    1. H
+                        1. A
+                        2. C
+                        3. E
+                        4. H
+                        5. L
+                        6. M
+                        7. O
+                        8. S
+                        9. X
+                    2. M
+                        1. L
+                        2. S
+                        3. T
+                            1. A
+                            2. C
+                            3. O
+                            4. S
+                        4. W
+                    3. O
+                        1. A
+                        2. L
+                        3. O
+                        4. S
+                    4. R
+                        1. M
+                            1. R
+                            2. S
+                            3. T
+                        2. S
+                            1. R
+                            2. S
+                            3. T
+                    5. S
+                        1. A
+                        2. L
+                        3. O
+                        4. S
+                    6. T
+                        1. A
+                        2. C
+                            1. D
+                            2. M
+                        3. F
+                        4. R
+                        5. S
+                5. I
+                    1. A
+                    2. C
+                    3. d
+                    4. I
+                    5. L
+                    6. M
+                    7. N
+                    8. O
+                    9. S
+                    10. Z
+                6. M
+                    1. S
+                    2. T
+                7. R
+                    1. A
+                    2. C
+                    3. H
+                    4. L
+                    5. O
+                    6. R
+                        1. D
+                        2. F
+                        3. L
+                    7. S
+                    8. V
+                        1. A
+                        2. G
+                        3. M
+                        4. O
+                    9. X
+                8. S
+                    1. A
+                    2. G
+                        1. A
+                        2. D
+                        3. M
+                    3. M
+                    4. R
+                    5. W
+                9. V
+                    1. C
+                    2. F
+                        1. A
+                        2. R
+                        3. U
+                    3. R
+                        1. A
+                        2. C
+                        3. d
+                        4. E
+                        5. M
+                        6. S
+                        7. s
+                        8. U
+                            1. C
+                            2. E
+                            3. H
+                            4. L
+                            5. M
+                        9. W
+                    4. S
+                    5. U
+                        1. F
+                        2. R
+                    6. V
+            2. H
+            3. i
+                1. a
+                    1. imt
+                    2. lar
+                    3. las
+                    4. lat
+                    5. SAR
+                    6. sas
+                    7. sat
+                2. e
+                    1. acrc
+                    2. acrt
+                    3. att
+                    4. cis
+                    5. cst
+                    6. dc
+                    7. dmt
+                    8. ect
+                    9. efa
+                    10. elt
+                    11. ems
+                    12. eos
+                    13. eps
+                    14. ial
+                    15. iat
+                    16. imt
+                    17. MCC
+                    18. mfk
+                    19. pac
+                    20. rna
+                    21. smt
+                    22. val
+                3. f
+                    1. act
+                    2. bp
+                    3. ct
+                    4. efp
+                    5. fb
+                    6. ft
+                    7. fta
+                    8. ftf
+                    9. hc
+                    10. het
+                    11. hf
+                    12. ht
+                    13. ibt
+                    14. imt
+                    15. mcu
+                    16. nsf
+                    17. pp
+                    18. st
+                    19. wt
+                4. h
+                    1. dmb
+                    2. dmc
+                    3. dmm
+                    4. dmp
+                    5. dms
+                    6. mor
+                    7. msr
+                    8. mst
+                    9. vma
+                5. l
+                    1. bs
+                    2. cct
+                    3. dt
+                    4. hps
+                    5. oa
+                    6. tt
+                6. m
+                    1. aaf
+                    2. aar
+                    3. ag
+                    4. ast
+                    5. atf
+                    6. etf
+                7. o
+                8. p
+                    1. acf
+                    2. ach
+                    3. act
+                    4. atc
+                    5. bh
+                    6. cah
+                    7. cc
+                    8. cce
+                    9. dat
+                    10. dmm
+                    11. dmr
+                    12. dmt
+                    13. drt
+                    14. dt
+                    15. dtf
+                    16. dtn
+                    17. epr
+                    18. es
+                    19. fbt
+                    20. gen
+                    21. hel
+                    22. hem
+                    23. htc
+                    24. ltc
+                    25. tb
+                    26. td
+                    27. tg
+                    28. tt
+                    29. wd
+                    30. wll
+                    31. wlm
+                    32. wls
+                    33. wpt
+                    34. wt
+                9. s
+                    1. ar
+                    2. ast
+                    3. cas
+                    4. cav
+                    5. cdr
+                    6. clc
+                    7. col
+                    8. cwa
+                    9. cwi
+                    10. cwt
+                    11. mnt
+                    12. mt
+                    13. rdf
+                    14. sfd
+                    15. uis
+                    16. utf
+                    17. wi
+            4. S
+                1. A
+                    1. C
+                    2. F
+                        1. C
+                        2. T
+                    3. J
+                        1. C
+                        2. T
+                    4. L
+                        1. C
+                        2. T
+                    5. M
+                        1. C
+                        2. T
+                    6. O
+                        1. C
+                        2. T
+                    7. P
+                        1. B
+                            1. C
+                            2. T
+                        2. C
+                        3. M
+                            1. C
+                            2. T
+                        4. T
+                    8. Q
+                        1. C
+                        2. T
+                    9. R
+                        1. C
+                        2. T
+                    10. S
+                        1. C
+                        2. T
+                    11. T
+                    12. W
+                        1. C
+                        2. T
+                    13. X
+                        1. C
+                        2. T
+                2. M
+                    1. C
+                    2. D
+                        1. C
+                        2. T
+                    3. M
+                        1. C
+                        2. T
+                    4. P
+                        1. C
+                        2. T
+                    5. T
+                    6. V
+                        1. C
+                        2. T
+                3. S
+                    1. 1
+                        1. C
+                        2. T
+                    2. 2
+                        1. C
+                        2. T
+                    3. 3
+                        1. A
+                            1. C
+                            2. T
+                        2. C
+                        3. T
+                    4. 4
+                        1. C
+                        2. T
+                    5. 5
+                        1. C
+                        2. T
+                    6. 6
+                        1. C
+                        2. T
+                    7. 7
+                        1. C
+                        2. T
+                    8. 8
+                        1. C
+                        2. T
+                    9. 9
+                        1. C
+                        2. T
+                    10. C
+                    11. d
+                    12. L
+                        1. C
+                        2. T
+                    13. T
+                    14. W
+                        1. C
+                        2. P
+                            1. C
+                            2. T
+                        3. T
+                    15. X
+                        1. C
+                        2. T
+                4. T
+                    1. A
+                        1. C
+                        2. T
+                    2. C
+                    3. I
+                        1. C
+                        2. T
+                    4. M
+                        1. C
+                        2. T
+                    5. R
+                        1. C
+                        2. T
+                    6. S
+                        1. C
+                        2. T
+                    7. T
+                5. X
+                    1. C
+                    2. E
+                        1. C
+                        2. T
+                    3. H
+                        1. C
+                        2. T
+                    4. O
+                        1. C
+                        2. M
+                            1. C
+                            2. T
+                        3. T
+                    5. R
+                        1. C
+                        2. T
+                    6. T
+            5. U
+                1. A
+                    1. B
+                        1. R
+                    2. C
+                        1. C
+                            1. K
+                            2. M
+                        2. R
+                            1. S
+                            2. W
+                        3. S
+                            1. A
+                            2. M
+                    3. D
+                    4. N
+                2. E
+                3. I
+                4. L
+                    1. C
+                    2. D
+                    3. F
+                    4. M
+                    5. S
+                5. M
+                    1. A
+                    2. C
+                    3. J
+                    4. M
+                        1. O
+                    5. O
+                    6. Q
+                    7. R
+                        1. G
+                        2. O
+                        3. S
+                            1. S
+                        4. X
+                    8. S
+                        1. E
+                            1. A
+                            2. C
+                            3. D
+                            4. I
+                            5. J
+                            6. T
+                    9. T
+                6. P
+                7. S
+                    1. A
+                    2. C
+                        1. L
+                    3. F
+                    4. M
+                        1. L
+                        2. N
+                        3. S
+                    5. O
+                    6. R
+                        1. S
+                        2. T
+                        3. W
+                    7. S
+                    8. W
+                    9. X
+    5. P
+        1. L
+        2. S
+        3. T
+        4. V
+    6. S
+        1. C
+            1. A
+                1. L
+                    1. A
+                    2. C
+                    3. S
+                        1. M
+                        2. T
+            2. D
+            3. G
+            4. H
+            5. L
+                1. B
+                    1. B
+                2. C
+                    1. C
+                    2. V
+                3. D
+                    1. D
+                4. F
+                    1. F
+                5. L
+                    1. L
+                        1. A
+                            1. S
+                        2. M
+                            1. I
+                        3. S
+                            1. U
+            6. M
+                1. M
+                    1. A
+                    2. D
+                    3. H
+                    4. L
+                    5. S
+            7. P
+                1. S
+                    1. B
+                    2. U
+                        1. G
+                        2. M
+                        3. T
+            8. S
+            9. U
+                1. M
+                2. N
+                3. S
+        2. G
+            1. C
+            2. G
+            3. T
+            4. U
+        3. N
+            1. F
+            2. H
+            3. I
+            4. M
+            5. N
+                1. R
+            6. R
+            7. S
+        4. O
+        5. S
+            1. A
+            2. P
+        6. X
+            1. F
+                1. D
+                    1. F
+                    2. R
+                2. T
+                    1. R
+            2. H
+            3. L
+            4. M
+                1. C
+                2. F
+                3. H
+                4. O
+                5. P
+                6. R
+                7. T
+                    1. O
+                    2. U
+            5. R
+    7. U
+        1. N
+            1. D
+        2. S
+            1. C
+                1. A
+                2. B
+                3. F
+                4. G
+                5. M
+            2. F
+            3. N
+                1. A
+                2. B
+                3. F
+                4. G
+                5. M
+            4. O
+                1. F
+            5. S
+                1. A
+            6. U
+                1. M
+                2. N
+                3. S
+        3. W
+            1. D
+                1. M
+            2. M
+                1. D
+                2. F
+                    1. D
+                3. G
+                    1. D
+                4. M
+                    1. D
+                5. O
+                    1. D
+            3. T
+    8. X
+        1. i
+            1. c
+            2. e
+            3. f
+                1. h
+                2. n
+                    1. h
+                    2. s
+                3. o
+                4. p
+                5. r
+                6. s
+                7. w
+            4. g
+                1. a
+                2. e
+                    1. a
+                    2. e
+                3. l
+                4. s
+                5. v
+                    1. e
+                    2. t
+            5. h
+            6. i
+            7. l
+                1. c
+                    1. d
+                    2. p
+                    3. r
+                2. l
+                    1. b
+                        1. e
+                        2. t
+                    2. l
+                    3. p
+                    4. s
+            8. m
+                1. a
+                2. c
+                3. d
+                4. f
+                5. g
+                6. h
+                7. i
+                8. n
+                9. r
+                10. s
+                11. t
+                12. u
+                13. z
+            9. o
+            10. r
+            11. s
+            12. t
+                1. a
+                    1. a
+                    2. h
+                2. m
+                    1. a
+                    2. h
+                3. r
+                    1. a
+                    2. h
+                4. v
+                    1. a
+                    2. h
+ </details>
+ <details>
+  <summary>2. b</summary>
+    1. d
+        1. a
+            1. c
+            2. i
+            3. v
+        2. c
+            1. b
+                1. b
+                2. c
+            2. e
+                1. d
+            3. n
+                1. n
+                    1. b
+                    2. sm
+                2. r
+                    1. dd
+        3. i
+            1. m
+        4. l
+            1. b
+            2. m
+        5. m
+        6. n
+        7. r
+        8. s
+    2. g
+        1. F
+            1. A
+                1. A
+                2. B
+                3. C
+                4. F
+                5. K
+                6. N
+                7. P
+                8. R
+                9. S
+                10. T
+            2. L
+                1. C
+                2. F
+                3. L
+                4. N
+                5. P
+                6. R
+                7. S
+            3. P
+                1. S
+                2. T
+                    1. C
+                    2. N
+                    3. R
+                    4. S
+        2. G
+            1. A
+                1. A
+                    1. F
+                    2. H
+                    3. M
+                        1. H
+                        2. L
+                    4. R
+                    5. W
+                2. L
+                    1. C
+                    2. L
+                    3. M
+                    4. S
+                    5. U
+                3. P
+                    1. C
+                    2. D
+                    3. P
+                    4. U
+            2. D
+                1. A
+                    1. B
+                        1. P
+                    2. E
+                2. L
+                    1. F
+                    2. P
+                3. P
+                    1. O
+                        1. C
+                        2. F
+                        3. N
+                        4. R
+                        5. S
+                    2. T
+            3. G
+                1. A
+                    1. A
+                    2. D
+                    3. E
+                    4. F
+                    5. G
+                    6. L
+                    7. P
+                    8. S
+                    9. X
+                    10. Y
+                    11. Z
+                2. L
+                    1. B
+                    2. C
+                    3. F
+                    4. L
+                    5. P
+                3. P
+                    1. A
+                        1. A
+                        2. C
+                        3. H
+                        4. K
+                        5. L
+                        6. M
+                        7. O
+                        8. P
+                        9. R
+                        10. S
+                        11. T
+                        12. W
+                    2. F
+                    3. H
+                        1. A
+                        2. Q
+                        3. X
+                        4. Y
+                    4. O
+                        1. D
+                        2. P
+                        3. R
+                        4. W
+                        5. Z
+                    5. P
+                        1. C
+                        2. D
+                        3. E
+                        4. K
+                        5. L
+                        6. O
+                        7. P
+                        8. R
+                        9. S
+                        10. W
+                    6. R
+                        1. D
+                        2. I
+                        3. N
+                        4. S
+                    7. U
+                        1. S
+                            1. A
+                            2. C
+                            3. D
+                        2. U
+                            1. B
+                            2. D
+                            3. L
+                            4. S
+                        3. Y
+                            1. A
+                            2. B
+                            3. C
+                            4. D
+                            5. K
+                            6. L
+                            7. P
+                            8. R
+                            9. S
+                            10. T
+                            11. V
+                    8. W
+                        1. A
+                        2. D
+                        3. E
+                        4. G
+                        5. I
+                        6. M
+                        7. P
+            4. O
+                1. A
+                    1. A
+                    2. F
+                    3. K
+                    4. O
+                    5. P
+                    6. S
+                2. L
+                    1. A
+                        1. A
+                        2. G
+                            1. M
+                            2. S
+                        3. R
+                        4. V
+                    2. C
+                    3. F
+                    4. I
+                    5. K
+                        1. A
+                        2. G
+                            1. M
+                            2. S
+                    6. L
+                    7. P
+                    8. T
+                3. P
+                    1. P
+            5. P
+                1. A
+                2. C
+                3. D
+                4. F
+                5. M
+                6. N
+                7. Y
+            6. S
+                1. A
+                    1. A
+                    2. B
+                    3. E
+                    4. N
+                    5. O
+                    6. T
+                2. L
+                    1. A
+                    2. H
+                    3. R
+        3. M
+            1. B
+                1. C
+                    1. A
+                    2. B
+                    3. D
+                    4. E
+                    5. F
+                    6. L
+                    7. P
+                    8. R
+                2. D
+                    1. D
+                    2. E
+                    3. I
+            2. N
+                1. B
+                2. C
+                3. D
+                    1. A
+                    2. B
+                    3. D
+                    4. E
+                    5. O
+                    6. P
+                    7. T
+                4. E
+                    1. B
+                    2. C
+                5. F
+                6. L
+                7. M
+                8. R
+                9. Z
+            3. O
+                1. A
+                    1. D
+                        1. C
+                        2. U
+                    2. O
+                        1. F
+                        2. M
+                        3. P
+                    3. R
+                    4. W
+                2. B
+                3. E
+                    1. B
+                    2. D
+                    3. F
+                    4. T
+                4. F
+                    1. A
+                    2. D
+                    3. G
+                    4. S
+                5. G
+                    1. B
+                    2. F
+                    3. L
+                    4. R
+                    5. Z
+                6. M
+                    1. C
+                    2. D
+                    3. E
+                    4. P
+                    5. T
+                    6. U
+                    7. W
+                7. R
+                    1. A
+                    2. C
+                    3. P
+                    4. S
+                8. S
+                9. T
+                10. U
+                11. W
+                    1. A
+                    2. C
+                        1. D
+                        2. S
+                        3. T
+                    3. D
+                    4. H
+                    5. L
+                    6. S
+                    7. U
+            4. S
+                1. E
+                2. F
+                3. L
+                4. P
+                5. S
+                6. U
+                7. W
+        4. O
+            1. B
+                1. A
+                2. E
+                3. O
+                4. T
+            2. E
+                1. D
+                2. P
+                3. V
+            3. F
+                1. A
+                2. E
+                3. O
+            4. H
+                1. I
+                2. M
+                3. N
+                4. O
+            5. S
+                1. B
+                    1. M
+                    2. N
+                    3. W
+                2. M
+                3. S
+        5. S
+            1. A
+                1. D
+                2. E
+                3. H
+                4. R
+                5. S
+                    1. B
+                    2. D
+                    3. R
+            2. L
+                1. C
+                    1. H
+                    2. M
+                2. R
+                    1. A
+                    2. M
+                    3. O
+                    4. T
+                    5. W
+            3. P
+                1. A
+                    1. S
+                    2. T
+                2. C
+                3. D
+                4. E
+                5. I
+                6. L
+                7. M
+                8. N
+                9. O
+                10. R
+                11. S
+                    1. A
+                    2. B
+                    3. C
+                    4. D
+                    5. E
+                    6. F
+                    7. G
+                    8. H
+                    9. I
+                    10. J
+                    11. Z
+                12. T
+                13. U
+                14. X
+                15. Y
+        6. T
+            1. A
+                1. S
+            2. B
+            3. C
+            4. D
+            5. E
+            6. F
+            7. H
+            8. I
+            9. J
+            10. K
+                1. F
+            11. L
+            12. M
+            13. N
+            14. O
+            15. P
+            16. Q
+            17. R
+            18. S
+            19. T
+            20. U
+                1. C
+                2. G
+                3. S
+            21. W
+                1. P
+            22. X
+            23. Y
+            24. Z
+            </details>
+ <details>
+  <summary>   3. i </details>
+        1. v
+</details>
+<details>
+  <summary>    4. l   </summary>
+        1. c
+            1. b
+                1. b
+                2. c
+            2. e
+                1. d
+            3. n
+                1. n
+                    1. b
+                    2. sm
+                2. r
+                    1. dd
+        2. e
+            1. h
+        3. f
+            1. a
+                1. a
+                2. c
+                3. d
+                4. f
+                5. h
+                6. p
+                7. s
+                8. w
+        4. g
+        5. h
+            1. a
+            2. am
+                1. s
+        6. i
+        7. l
+            1. l
+                1. ad
+                2. an
+                    1. or
+                3. as
+                4. av
+                5. ba
+                6. bt
+                7. bur
+                    1. a
+                        1. d
+                        2. e
+                        3. i
+                        4. o
+                        5. p
+                        6. t
+                        7. x
+                    2. s
+                        1. c
+                8. c
+                    1. a
+                    2. pc
+                    3. wf
+                    4. wi
+                    5. wr
+                9. ca
+                10. cd
+                11. cr
+                12. dc
+                13. dov
+                14. dp
+                15. drp
+                16. dui
+                    1. j
+                17. dv
+                18. ep
+                19. hr
+                    1. wi
+                    2. wr
+                20. hup
+                    1. a
+                    2. s
+                21. ii
+                22. io
+                23. jo
+                24. k
+                25. l
+                26. m
+                27. mi
+                28. mm
+                29. mp
+                30. od
+                31. ph
+                32. r
+                    1. sa
+                33. rd
+                34. rt
+                35. s
+                36. sc
+                37. sd
+                38. sg
+                39. si
+                40. so
+                41. sp
+                42. su
+                43. sv
+                44. te
+                45. vt
+        8. m
+        9. o
+            1. byp
+                1. s
+                    1. 24
+                    2. b
+                    3. f
+                    4. g
+                    5. sb
+                    6. zs
+            2. can
+                1. s
+            3. clo
+                1. s
+                    1. sm
+            4. far
+                1. s
+                    1. pa
+            5. ftt
+                1. s
+                    1. pn
+            6. log
+                1. s
+                    1. ad
+                    2. ap
+                    3. as
+                    4. cr
+                    5. ds
+                    6. er
+                    7. es
+                    8. pe
+                    9. px
+                    10. sa
+                    11. sr
+                    12. ss
+                    13. tr
+                    14. ua
+                    15. vx
+            7. ltc
+                1. s
+                    1. af
+            8. lto
+                1. s
+            9. nul
+                1. s
+                    1. p
+                    2. pr
+            10. opn
+                1. s
+                    1. a
+                    2. d
+                    3. e
+                    4. ex
+                    5. g
+                    6. k
+                    7. l
+                    8. qa
+                    9. r
+                    10. u
+                    11. up
+            11. pan
+            12. res
+                1. s
+                    1. er
+            13. spc
+                1. a
+                    1. a
+                    2. e
+                    3. f
+                    4. g
+                    5. l
+                    6. w
+                2. s
+                    1. f
+                    2. li
+            14. sps
+                1. a
+                    1. g
+                2. s
+                    1. ar
+                    2. b1
+                    3. b2
+                    4. dd
+                    5. rr
+                    6. rx
+                    7. sr
+                    8. tr
+            15. tam
+                1. a
+                2. s
+                    1. e
+                    2. p
+                    3. s
+                    4. v
+            16. tbl
+                1. a
+                    1. b
+                    2. c
+                    3. d
+                    4. ee
+                    5. l
+                    6. p
+                    7. u
+                2. s
+                    1. a
+                    2. ar
+                    3. b
+                    4. b1
+                    5. b2
+                    6. bt
+                    7. c
+                    8. cf
+                    9. dc
+                    10. dh
+                    11. dl
+                    12. e
+                    13. e50
+                    14. e90
+                    15. em
+                    16. eo
+                    17. ft
+                    18. gf
+                    19. lb
+                    20. lo
+                    21. lp
+                    22. lr
+                    23. ls
+                    24. ms
+                    25. n
+                    26. o
+                    27. p
+                    28. pf
+                    29. pl
+                    30. pp
+                    31. ps
+                    32. ra
+                    33. rf
+                    34. rfb
+                    35. rr
+                    36. rs
+                    37. sh
+                    38. sl
+                    39. sp
+                    40. sr
+                    41. ss
+                    42. st
+                    43. t1
+                    44. t2
+                    45. ti
+                    46. tr
+                    47. x
+                    48. y
+            17. tem
+                1. a
+                    1. h
+                    2. l
+                    3. lh
+                    4. r
+            18. tst
+                1. s
+                    1. fa
+                    2. m
+                    3. pt
+                    4. st
+                    5. wm
+        10. r
+        11. s
+        12. t
+            1. v
+                1. a
+                    1. c
+                        1. f
+                        2. n
+                    2. e
+                    3. f
+                    4. i
+                    5. j
+                    6. o
+                    7. or
+                    8. p
+                2. o
+    5. m
+        1. g
+            1. o
+        2. p
+            1. c
+                1. cp
+                2. ip
+            2. m
+                1. c
+            3. s
+                1. m
+                2. p
+                    1. i
+                    2. loc
+                    3. op
+            4. t
+            5. v
+                1. p
+                    1. i
+            6. w
+        3. r
+    6. r
+        1. h
+            1. c
+        2. I
+            1. A
+                1. S
+                    1. C
+                        1. C
+                        2. O
+                        3. P
+                        4. S
+                    2. R
+                        1. A
+                            1. I
+                            2. S
+                        2. C
+                        3. D
+                        4. E
+                        5. F
+                        6. I
+                        7. M
+                            1. A
+                            2. D
+                            3. F
+                            4. G
+                            5. T
+                        8. T
+                            1. A
+                            2. I
+                            3. T
+                        9. U
+            2. G
+                1. S
+                    1. C
+                        1. C
+                        2. O
+                        3. P
+                        4. S
+                        5. T
+                    2. R
+                        1. A
+                            1. A
+                            2. T
+                        2. B
+                        3. C
+                            1. A
+                            2. S
+                        4. D
+                        5. E
+                        6. F
+                        7. H
+                        8. I
+                        9. M
+                            1. A
+                            2. F
+                            3. G
+                            4. M
+                            5. T
+                        10. S
+                        11. T
+                            1. A
+                            2. I
+                            3. T
+                        12. U
+            3. P
+                1. S
+                    1. C
+                        1. D
+                    2. R
+                        1. D
+                        2. E
+                        3. I
+                        4. M
+                        5. S
+                        6. T
+                        7. U
+            4. S
+                1. S
+                    1. C
+                        1. C
+                        2. O
+                        3. P
+                        4. S
+                    2. R
+                        1. A
+                            1. A
+                            2. T
+                        2. C
+                            1. A
+                            2. I
+                        3. D
+                        4. E
+                        5. F
+                        6. H
+                        7. I
+                        8. M
+                            1. A
+                            2. F
+                            3. G
+                            4. M
+                            5. T
+                        9. S
+                        10. T
+                            1. A
+                            2. I
+                            3. T
+                        11. U
+            5. U
+                1. S
+                    1. C
+                        1. O
+                        2. P
+                        3. S
+                    2. R
+                        1. D
+                        2. E
+                        3. M
+                        4. S
+                        5. T
+                        6. U
+        3. O
+            1. I
+                1. D
+                2. F
+                3. G
+                4. I
+                5. R
+                6. S
+                7. V
+            2. L
+                1. B
+                2. G
+                3. W
+            3. O
+                1. A
+                2. D
+                3. E
+                4. F
+                5. H
+                    1. A
+                    2. T
+                    3. V
+                6. K
+                7. M
+                8. O
+                9. P
+                10. R
+                    1. C
+                    2. W
+                11. S
+                12. U
+                13. Y
+                    1. H
+                    2. T
+                    3. W
+            4. V
+                1. A
+                2. B
+                3. D
+                4. M
+                5. P
+                6. S
+                7. Y
+    7. w
+        1. A
+            1. C
+                1. a
+                2. b
+                3. B
+                4. c
+                5. C
+                6. O
+                7. P
+                8. S
+                9. t
+                10. W
+            2. F
+                1. I
+                2. V
+            3. I
+                1. C
+                    1. L
+                    2. M
+                    3. S
+                2. M
+                    1. L
+                    2. M
+                    3. S
+                3. R
+                    1. L
+                    2. M
+                    3. S
+            4. O
+                1. B
+                2. D
+                3. F
+                    1. F
+                4. H
+                5. K
+                6. S
+                7. T
+            5. P
+                1. F
+                    1. C
+                        1. U
+                    2. O
+                    3. S
+                    4. W
+                        1. U
+                2. H
+                3. L
+                4. X
+                    1. R
+                    2. S
+                    3. T
+            6. R
+                1. C
+                2. H
+                3. I
+                4. R
+                    1. D
+                        1. F
+                    2. F
+                    3. S
+                5. S
+                    1. G
+                    2. S
+            7. S
+                1. S
+                    1. H
+                    2. T
+                2. T
+                    1. F
+                    2. L
+                    3. R
+            8. t
+            9. T
+                1. E
+                2. L
+                3. M
+                4. S
+            10. W
+                1. J
+        2. O
+        3. S
+    8. x.*
+ </details>
+<pre><code>   &lt;details&gt;
+</code></pre>
+<ol>
+<li>c<ol>
+<li>c</li>
+<li>f<ol>
+<li>d</li>
+<li>i</li>
+</ol>
+</li>
+<li>l<ol>
+<li>f</li>
+</ol>
+</li>
+<li>r</li>
+<li>s
+</details>details&gt;</li>
+</ol>
+</li>
+<li>r<ol>
+<li>c<ol>
+<li>x<ol>
+<li>b<ol>
+<li>b<ol>
+<li>a<ol>
+<li>n</li>
+<li>t</li>
+</ol>
+</li>
+<li>b<ol>
+<li>b</li>
+<li>c<ol>
+<li>a</li>
+<li>b</li>
+</ol>
+</li>
+<li>p<ol>
+<li>n</li>
+<li>u</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>c</li>
+<li>d</li>
+<li>g</li>
+<li>l</li>
+<li>m</li>
+<li>p</li>
+<li>t<ol>
+<li>d</li>
+<li>j</li>
+<li>s</li>
+<li>u</li>
+<li>w</li>
+</ol>
+</li>
+<li>y</li>
+</ol>
+</li>
+<li>c<ol>
+<li>s</li>
+</ol>
+</li>
+<li>m<ol>
+<li>c</li>
+</ol>
+</li>
+<li>r<ol>
+<li>q<ol>
+<li>d</li>
+<li>w</li>
+</ol>
+</li>
+<li>r<ol>
+<li>r</li>
+<li>u</li>
+</ol>
+</li>
+<li>t<ol>
+<li>h</li>
+<li>m</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>s<ol>
+<li>a</li>
+<li>e</li>
+<li>f</li>
+<li>g<ol>
+<li>bg</li>
+<li>bs</li>
+<li>u</li>
+</ol>
+</li>
+<li>m</li>
+<li>s<ol>
+<li>p</li>
+<li>s</li>
+</ol>
+</li>
+<li>t</li>
+<li>w</li>
+</ol>
+</li>
+<li>t<ol>
+<li>3</li>
+<li>a</li>
+<li>b<ol>
+<li>x</li>
+<li>xr</li>
+</ol>
+</li>
+<li>c</li>
+<li>d</li>
+<li>e<ol>
+<li>pg</li>
+<li>uc</li>
+</ol>
+</li>
+<li>n</li>
+<li>r<ol>
+<li>w</li>
+<li>wa</li>
+</ol>
+</li>
+<li>s<ol>
+<li>s</li>
+<li>t</li>
+</ol>
+</li>
+<li>t</li>
+<li>v</li>
+<li>y</li>
+</ol>
+</li>
+<li>v<ol>
+<li>e<ol>
+<li>e<ol>
+<li>e</li>
+<li>v<ol>
+<li>f</li>
+<li>n</li>
+<li>t</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>j</li>
+</ol>
+</li>
+<li>r</li>
+<li>s</li>
+<li>y<ol>
+<li>l</li>
+<li>o</li>
+<li>u</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>c<ol>
+<li>a<ol>
+<li>w</li>
+</ol>
+</li>
+<li>b<ol>
+<li>a</li>
+<li>c<ol>
+<li>c</li>
+<li>h</li>
+<li>p</li>
+<li>s</li>
+</ol>
+</li>
+<li>m</li>
+<li>s</li>
+</ol>
+</li>
+<li>c<ol>
+<li>h</li>
+</ol>
+</li>
+<li>g<ol>
+<li>b</li>
+<li>d</li>
+<li>n</li>
+<li>p</li>
+<li>s</li>
+</ol>
+</li>
+<li>h<ol>
+<li>e</li>
+</ol>
+</li>
+<li>i<ol>
+<li>b</li>
+<li>o<ol>
+<li>f</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>m<ol>
+<li>a</li>
+<li>b</li>
+<li>m</li>
+<li>t</li>
+</ol>
+</li>
+<li>n<ol>
+<li>g<ol>
+<li>a</li>
+<li>b</li>
+<li>d</li>
+</ol>
+</li>
+<li>v<ol>
+<li>x</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>o<ol>
+<li>b</li>
+</ol>
+</li>
+<li>p<ol>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+<li>h</li>
+<li>i</li>
+<li>m</li>
+<li>o</li>
+<li>p<ol>
+<li>c</li>
+<li>d</li>
+</ol>
+</li>
+<li>r<ol>
+<li>w</li>
+<li>y</li>
+</ol>
+</li>
+<li>s</li>
+<li>t</li>
+</ol>
+</li>
+<li>s<ol>
+<li>cx</li>
+<li>l<ol>
+<li>hl</li>
+<li>l</li>
+</ol>
+</li>
+<li>m<ol>
+<li>h</li>
+<li>hd</li>
+<li>hl</li>
+<li>n</li>
+<li>q</li>
+<li>s</li>
+<li>t</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>v<ol>
+<li>a
+</details>details&gt;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>t<ol>
+<li>a<ol>
+<li>c</li>
+<li>d</li>
+<li>e</li>
+<li>k</li>
+<li>r</li>
+<li>s</li>
+</ol>
+</li>
+<li>k<ol>
+<li>d</li>
+<li>i</li>
+<li>t</li>
+</ol>
+</li>
+<li>m</li>
+<li>p<ol>
+<li>a<ol>
+<li>c</li>
+<li>f</li>
+<li>k</li>
+</ol>
+</li>
+<li>k<ol>
+<li>d</li>
+<li>i</li>
+<li>t</li>
+</ol>
+</li>
+<li>r</li>
+<li>s<ol>
+<li>i</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>q</li>
+<li>r</li>
+<li>s<ol>
+<li>b</li>
+<li>i<ol>
+<li>e</li>
+<li>i</li>
+</ol>
+</li>
+<li>r</li>
+<li>v<ol>
+<li>e</li>
+<li>i</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>u<ol>
+<li>q</li>
+<li>z</li>
+</ol>
+</li>
+<li>x<ol>
+<li>a<ol>
+<li>f</li>
+<li>o</li>
+<li>s<ol>
+<li>c</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>i<ol>
+<li>l</li>
+</ol>
+</li>
+<li>m<ol>
+<li>c<ol>
+<li>l</li>
+<li>k<ol>
+<li>u</li>
+<li>c</li>
+</ol>
+</li>
+<li>m</li>
+<li>n</li>
+<li>e</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>v<ol>
+<li>m
+</details>details&gt;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>u<ol>
+<li>d<ol>
+<li>c<ol>
+<li>c</li>
+</ol>
+</li>
+<li>f<ol>
+<li>m</li>
+</ol>
+</li>
+<li>r</li>
+</ol>
+</li>
+<li>r<ol>
+<li>b<ol>
+<li>bullseye</li>
+<li>c<ol>
+<li>c</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>rb<ol>
+<li>a</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>y<ol>
+<li>a<ol>
+<li>r</li>
+<li>w</li>
+</ol>
+</li>
+<li>c<ol>
+<li>f<ol>
+<li>a</li>
+<li>b</li>
+<li>d</li>
+<li>i</li>
+<li>r<ol>
+<li>c</li>
+<li>p</li>
+</ol>
+</li>
+<li>s</li>
+<li>x</li>
+</ol>
+</li>
+<li>s</li>
+</ol>
+</li>
+<li>s<ol>
+<li>c</li>
+<li>e<ol>
+<li>a</li>
+<li>d<ol>
+<li>c</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>i</li>
+<li>m</li>
+<li>p</li>
+<li>r
+&lt;/ details&gt;
+&lt;/ details&gt;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright (c)2022 FreeTAKTeam
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.sections", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+    
+  </body>
+</html>
